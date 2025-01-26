@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вариант 28</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #fdf2e9;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .search-bar {
+            margin: 10px auto;
+            width: 80%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            margin-left: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #d90075;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #b0005a;
+        }
+
+        nav {
+            background-color: #ffe4e1;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #d90075;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .row {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .card {
+            display: inline-block;
+            width: 30%;
+            margin: 1%;
+            border: 1px solid #ccc;
+            text-align: center;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+
+        .card img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #f1f1f1;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                width: 45%;
+                margin: 2% auto;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .card {
+                width: 90%;
+                margin: 5% auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Подборка лучших игр</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Искать игры..." />
+            <button>Поиск</button>
+        </div>
+    </header>
+
+    <nav>
+        <a href="./prikol.html">Подборка лучших игр</a>
+        <a href="./list_of_games.html">Список игр</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <img src="../images/the witcher 3.png" alt="The Witcher 3">
+                <h3>The Witcher 3: Wild Hunt</h3>
+                <p>Ролевая игра, 2015, рейтинг 92/9.2</p>
+            </div>
+            <div class="card">
+                <img src="../images/gow.png" alt="God of War Ragnarök">
+                <h3>God of War: Ragnarök</h3>
+                <p>Экшен, 2022, рейтинг 94/8.0</p>
+            </div>
+            <div class="card">
+                <img src="../images/elden ring.png" alt="Elden Ring">
+                <h3>Elden Ring</h3>
+                <p>Экшен/RPG, 2022, рейтинг 96/7.8</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <img src="../images/cyberpunk 2077.png" alt="Cyberpunk 2077">
+                <h3>Cyberpunk 2077</h3>
+                <p>Ролевая игра, 2020, рейтинг 86/7.1</p>
+            </div>
+            <div class="card">
+                <img src="../images/hogwarts.png" alt="Hogwarts Legacy">
+                <h3>Hogwarts Legacy</h3>
+                <p>Ролевая игра, 2023, рейтинг 84/8.5</p>
+            </div>
+            <div class="card">
+                <img src="./images/rdr 2.png" alt="Red Dead Redemption 2">
+                <h3>Red Dead Redemption 2</h3>
+                <p>Экшен/Приключения, 2018, рейтинг 97/8.4</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card">
+                <img src="./images/zelda.png" alt="The Legend of Zelda">
+                <h3>The Legend of Zelda: Breath of the Wild</h3>
+                <p>Приключения, 2017, рейтинг 97/8.7</p>
+            </div>
+            <div class="card">
+                <img src="./images/mario odyssey.png" Super Mario Odyssey">
+                <h3>Super Mario Odyssey</h3>
+                <p>Платформер, 2017, рейтинг 97/8.9</p>
+            </div>
+            <div class="card">
+                <img src="./images/GTA 5.png" alt="Grand Theft Auto V">
+                <h3>Grand Theft Auto V</h3>
+                <p>Экшен/Приключения, 2013, рейтинг 97/8.3</p>
+            </div>
+        </div>
+
+
+        <footer>
+            <p class="end">© Березницкий Д.С., Б9122-09.03.04, 2024-2025</p>
+            <p class="end" align="right">✉ Свяжитесь с нами</p>
+        </footer>
+
+</body>
+
+</html>

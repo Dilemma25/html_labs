@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 10px;
+            /* box-sizing: border-box; */
+            display: block;
+            background-color: greenyellow;
+        }
+
+        .block {
+            display: inline-block;
+            vertical-align: top;
+            /* width: calc(50% - 20px); */
+            margin: 5px;
+            padding: 10px;
+            text-align: justify;
+            /* box-sizing: border-box; */
+            border: 1px solid #c5dbc5;
+            background-color: white;
+            text-align: right;
+        }
+
+        .block.large {
+            text-align: left;
+            /* width: calc(30% - 20px); */
+        }
+
+        .container1 {
+            display: inline-block;
+        }
+
+        .conteiner-block {
+            display: block;
+        }
+
+        /* @media screen and (max-width: 800px) {
+            .block {
+                width: calc(50% - 10px);
+            }
+
+            .block.large {
+                width: calc(100% - 10px);
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .block {
+                width: calc(100% - 10px);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="conteiner1">
+            <div class="conteiner-block">
+                <div class="block"><strong>JavaScript</strong> разработан в 1996 году, автор — американский<br>
+                    программист
+                    Брендан
+                    Айк.</div>
+                <div class="block"><strong>Prolog</strong> разработан в 1972 году, автор — французский<br> программист
+                    Ален
+                    Колмеро.
+                </div>
+            </div>
+            <div class="block large"><strong>Ruby</strong> разработан в 1993–1995<br> годах, автор — японский<br>
+                программист
+                Юкихиро<br>
+                Мацумото.
+            </div>
+        </div>
+        <div class="conteiner1">
+            <div class="block large"><strong>C</strong> разработан в 1969–1973<br> годах сотрудником Bell Labs<br>
+                Деннисом
+                Ритчи.</div>
+            <div class="block"><strong>Python</strong> создан в 1989–1991 годах голландским программистом<br> Гвидо ван
+                Россумом.</div>
+            <div class="block"><strong>Java</strong> разработан в 1990–1996 годах канадским программистом<br> Джеймсом
+                Гослингом.</div>
+        </div>
+    </div>
+</body>
+
+</html>
