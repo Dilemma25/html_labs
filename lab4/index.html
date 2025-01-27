@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        header h1 {
+            margin: 0;
+            flex: 0 0 auto;
+        }
+
+        header nav button {
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            flex: 1 1 auto;
+            max-width: 150px;
+            min-width: 80px;
+            width: 20%;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        header nav button:hover {
+            background-color: #e0e0e0;
+        }
+
+        @media (max-width: 768px) {
+            header nav button {
+                font-size: 0.9rem;
+                padding: 8px 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav button {
+                font-size: 0.8rem;
+                padding: 6px 8px;
+                min-width: 60px;
+            }
+        }
+
+        .main-image {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            height: auto;
+        }
+
+        .main-image>img {
+            width: 65%;
+            height: auto;
+            object-position: top;
+        }
+
+        .thumbnail-images {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: space-between;
+            padding-left: 10px;
+            flex-grow: 2;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .thumbnail-images img {
+            width: 100%;
+            height: 40%;
+            aspect-ratio: 9 / 3;
+        }
+
+        .game-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .game-section .game-info {
+            display: flex;
+            gap: 20px;
+            width: 70%;
+        }
+
+        .game-info .game-card {
+            width: 48%;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .game-info .game-card img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-games {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 28%;
+        }
+
+        .sidebar-games .sidebar-card {
+            display: flex;
+            gap: 10px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-card img {
+            width: 30%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+
+        @media (max-width: 768px) {
+            .main-image {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .main-image>img {
+                width: 100%;
+            }
+
+            .thumbnail-images {
+                flex-direction: column;
+                padding-left: 0;
+            }
+
+            .thumbnail-images img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: unset;
+            }
+
+            .game-section {
+                flex-direction: column;
+                /* Делаем блок вертикальным */
+            }
+
+            .game-section .game-info {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .game-info .game-card {
+                width: 100%;
+            }
+
+            .sidebar-games {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .sidebar-games .sidebar-card {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sidebar-games .sidebar-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Game Page</h1>
+        <nav>
+            <button><a href="./list_of_games.html">Список игр</a></button>
+            <button><a href="./index.html">Подборка лучших</a></button>
+            <!-- <button>Menu 3</button> -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="main-image">
+            <img src="./images/main image.png" Main Image">
+
+            <div class="thumbnail-images">
+                <img src="./images/image1 .png" alt="Image 1">
+                <img src="./images/rdr image 1.png" alt="Image 2">
+                <img src="./images/cof mv2 image 1.png" alt="Image 3">
+            </div>
+        </div>
+
+        <div class="game-section">
+            <div class="game-info">
+                <div class="game-card">
+                    <img src="./images/the witcher 3.png" alt="Game 1">
+                    <h2>The Witcher 3: Wild Hunt</h2>
+                    <p>Я геймер со стажем и хочу сказать, что за последние наверное 10 лет - это лучшая игра в любых
+                        жанрах. Она настолько продумана, что я не знаю, что нужно сделать, чтобы ее переплюнуть. Буду
+                        ждать с нетерпением выхода 4-го Ведьмака. Графика классная, диалоги можно слушать вечно и она не
+                        надоедает. Есть DLC, есть куча побочных квестов, которые если делать, можно игру проходить
+                        месяцами. Немного раздражали вставки за Цири, но их немного. А некоторые квесты настолько
+                        сильные, что реально до слез. Боевка сделана великолепно и нет такого, что вы будете пачками
+                        нагибать монстров. Можно зайти в какую-нибудь локацию, и монстры вас просто уничтожат. Да
+                        обычные утопцы могут навалять главному герою легко. Проходил игру трижды, думаю перепройти еще
+                        раз со всеми квестами. Однозначно рекомендую.</p>
+                </div>
+                <div class="game-card">
+                    <img src="./images/gow.png" alt="Game 2">
+                    <h2>God of War: Ragnarök</h2>
+                    <p>Это точно самая долгожданная игра от sony в 2022 году. Они смогли порадовать нас во всем.
+                        Графика, геймплей, сюжет, разговоры, персонажи, атмосфера, бои, все это есть в этой прекрасной
+                        игре. Играя в нее, ты незаметно начинаешь погружаться в этот мир где думаешь что ты и есть Бог.
+                        Sony постарались над всем, более всего над сюжетом. Ну и неудивительно, sony редко делают плохие
+                        игры. А тут они точно порадовали нас под конец года. Вообщем, это точно взрыв бошки!
+                        Подробнее на Отзовик:
+                    </p>
+                </div>
+            </div>
+
+            <div class="sidebar-games">
+                <div class="sidebar-card">
+                    <img src="./images/cyberpunk.png" alt="Sidebar Image 1">
+                    <div>
+                        <h3>Cyberpunk 2077</h3>
+                        <p>Ролевая игра, 2020, рейтинг 86/7.1</p>
+                    </div>
+                </div>
+                <div class="sidebar-card">
+                    <img src="./images/rdr2.png" alt="Sidebar Image 2">
+                    <div>
+                        <h3>Red Dead Redemption 2</h3>
+                        <p>Экшен/Приключения, 2018, рейтинг 97/8.4</p>
+                    </div>
+                </div>
+                <div class="sidebar-card">
+                    <img src="./images/gta5.png" alt="Sidebar Image 3">
+                    <div>
+                        <h3>Grand Theft Auto V</h3>
+                        <p>Экшен/Приключения, 2013, рейтинг 97/8.3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p class="end">© Березницкий Д.С., Б9122-09.03.04, 2024-2025</p>
+            <p class="end" align="right">✉ Свяжитесь с нами</p>
+        </footer>
+</body>
+
+</html>
