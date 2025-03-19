@@ -48,7 +48,6 @@
             max-height: 100%;
         }
 
-
         .hover-shadow:hover {
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             transform: scale(1.05);
@@ -62,35 +61,55 @@
             background-color: #f4f4f4;
         }
 
-        /* Изменения для увеличения элементов внутри mainConteiner */
+        /* Центрирование mainConteiner */
         .mainConteiner {
             width: 100vw;
-            justify-items: center;
-        }
-
-        .mainConteiner .container.mt-4 {
-            width: 100% !important;
-            max-width: 100%;
-        }
-
-        .mainConteiner .row {
-            width: 100%;
             display: flex;
-            flex-wrap: wrap;
+            justify-content: center;
         }
 
+        /* Контейнер внутри mainConteiner */
+        .mainConteiner .container {
+            width: 100%;
+            /* max-width: 1200px; */
+            /* Ограничиваем максимальную ширину */
+        }
+
+        /* Центрирование колонок внутри .row */
+        .mainConteiner .row {
+            display: flex;
+            justify-content: center;
+            gap: 1;
+            /* Убирает лишнее пространство */
+            width: 100%;
+        }
+
+        /* .conteiner-mt-4 {
+            width: 100%;
+        } */
+
+        /* Ширина колонок */
         .mainConteiner .col-lg-8 {
-            width: 75%;
-            /* flex-grow: 1; */
+            width: 60%;
         }
 
         .mainConteiner .col-lg-4 {
-            /* flex-grow: 2; */
-            width: 25%;
+            width: 40%;
         }
 
+        /* Карточки внутри основного контента */
         .mainConteiner .card {
-            width: 100%;
+            width: 90%;
+        }
+
+        /* Медиа-запросы */
+        @media screen and (max-width: 992px) {
+
+            .mainConteiner .col-lg-8,
+            .mainConteiner .col-lg-4 {
+                width: 100%;
+                /* На мобильных делаем на всю ширину */
+            }
         }
 
         @media screen and (min-width: 577px) {
@@ -213,50 +232,49 @@
     </div>
 
     <div class="mainConteiner">
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="card hover-shadow">
-                                <img src="./images/the witcher 3.png" class="card-img-top" alt="The Witcher 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">The Witcher 3: Wild Hunt</h5>
-                                    <p class="card-text">Ролевая игра, 2015, рейтинг 92/9.2</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card hover-shadow">
-                                <img src="./images/gow.png" class="card-img-top" alt="God of War">
-                                <div class="card-body">
-                                    <h5 class="card-title">God of War: Ragnarök</h5>
-                                    <p class="card-text">Экшен, 2022, рейтинг 94/8.0</p>
-                                </div>
+        <!-- <div class="container mt-4"> -->
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card hover-shadow">
+                            <img src="./images/the witcher 3.png" class="card-img-top" alt="The Witcher 3">
+                            <div class="card-body">
+                                <h5 class="card-title">The Witcher 3: Wild Hunt</h5>
+                                <p class="card-text">Ролевая игра, 2015, рейтинг 92/9.2</p>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action hover-shadow">
-                            <img src="./images/cyberpunk.png" alt="Cyberpunk" class="img-fluid me-3"
-                                style="width: 50px;">
-                            Cyberpunk 2077
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action hover-shadow">
-                            <img src="./images/rdr2.png" alt="RDR2" class="img-fluid me-3" style="width: 50px;">
-                            Red Dead Redemption 2
-                        </a>
-                        <a href="#" class="list-group-item list-group-item-action hover-shadow">
-                            <img src="./images/gta5.png" alt="GTA V" class="img-fluid me-3" style="width: 50px;">
-                            Grand Theft Auto V
-                        </a>
+                    <div class="col-md-6">
+                        <div class="card hover-shadow">
+                            <img src="./images/gow.png" class="card-img-top" alt="God of War">
+                            <div class="card-body">
+                                <h5 class="card-title">God of War: Ragnarök</h5>
+                                <p class="card-text">Экшен, 2022, рейтинг 94/8.0</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-lg-4">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action hover-shadow">
+                        <img src="./images/cyberpunk.png" alt="Cyberpunk" class="img-fluid me-3" style="width: 50px;">
+                        Cyberpunk 2077
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action hover-shadow">
+                        <img src="./images/rdr2.png" alt="RDR2" class="img-fluid me-3" style="width: 50px;">
+                        Red Dead Redemption 2
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action hover-shadow">
+                        <img src="./images/gta5.png" alt="GTA V" class="img-fluid me-3" style="width: 50px;">
+                        Grand Theft Auto V
+                    </a>
+                </div>
+            </div>
         </div>
+        <!-- </div> -->
     </div>
     <footer>
         <p>© Березницкий Д.С., Б9122-09.03.04, 2024-2025</p>
