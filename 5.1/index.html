@@ -11,70 +11,6 @@
             color: #007bff;
             font-weight: bold;
         }
-
-        .card img {
-            max-width: 100px;
-            max-height: 100px;
-            object-fit: cover;
-        }
-
-        .first-row .col:nth-child(1) .card-body {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .first-row .col:nth-child(1) .card-title {
-            margin-right: auto;
-        }
-
-        .first-row .col:nth-child(2) .card-body {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .first-row .col:nth-child(2) .card-title {
-            margin-left: auto;
-        }
-
-        @media (max-width:990px) {
-            .card-body {
-                flex-direction: column;
-                align-items: center;
-                text-align: left;
-                justify-content: center;
-            }
-
-            .card img {
-                width: 45%;
-                max-width: 250px;
-                height: auto;
-            }
-
-            img {
-                order: -2;
-            }
-
-            .card-title {
-                order: -1;
-            }
-
-            .card-text {
-                order: 0;
-            }
-
-            .row-cols-lg-4 .card-text {
-                text-align: left;
-            }
-
-            .first-row .col:nth-child(2) .card-title {
-                margin-left: 0;
-                /* Убираем автоматический отступ */
-                text-align: center;
-                /* Выравниваем заголовок по центру */
-            }
-        }
     </style>
 </head>
 
@@ -84,20 +20,26 @@
         <div class="row row-cols-1 row-cols-md-2 g-4 first-row">
             <div class="col">
                 <div class="card h-100 p-3">
-                    <div class="card-body d-flex align-items-center">
-                        <h5 class="card-title custom-blue me-3">Java</h5>
-                        <p class="card-text me-3">Разработан в 1990–1996 годах канадским программистом Джеймсом
+                    <div
+                        class="card-body d-flex align-items-center justify-content-between flex-md-column justify-content-md-center">
+                        <h5 class="card-title custom-blue me-auto order-md-2 text-md-center">Java</h5>
+                        <p class="card-text me-3 order-md-3">Разработан в 1990–1996 годах канадским программистом
+                            Джеймсом
                             Гослингом.</p>
-                        <img src="./images/rdr2.png" alt="Java">
+                        <img src="./images/rdr2.png" alt="Java" class="img-fluid order-md-1"
+                            style="max-width: 100px; object-fit: cover;">
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100 p-3">
-                    <div class="card-body d-flex align-items-center">
-                        <img src="./images/rdr2.png" alt="Prolog" class="me-3">
-                        <p class="card-text me-3">Разработан в 1972 году французским программистом Аленом Колмеро.</p>
-                        <h5 class="card-title custom-blue">Prolog</h5>
+                    <div
+                        class="card-body d-flex align-items-center justify-content-between flex-md-column justify-content-md-center">
+                        <img src="./images/rdr2.png" alt="Prolog" class="img-fluid me-3 order-md-1"
+                            style="max-width: 100px; object-fit: cover;">
+                        <p class="card-text me-3 order-md-3">Разработан в 1972 году французским программистом Аленом
+                            Колмеро.</p>
+                        <h5 class="card-title custom-blue ms-auto order-md-2">Prolog</h5>
                     </div>
                 </div>
             </div>
@@ -107,30 +49,34 @@
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-3">
             <div class="col">
                 <div class="card h-100 text-center p-3">
-                    <h5 class="card-title custom-blue">JavaScript</h5>
-                    <p class="card-text">Разработан в 1996 году американским программистом Бренданом Айком.</p>
-                    <img src="./images/rdr2.png" alt="JavaScript" class="mx-auto">
+                    <h5 class="card-title custom-blue order-md-2">JavaScript</h5>
+                    <p class="card-text order-md-3">Разработан в 1996 году американским программистом Бренданом Айком.
+                    </p>
+                    <img src="./images/rdr2.png" alt="JavaScript" class="img-fluid w-50 mx-auto order-md-1">
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100 text-center p-3">
-                    <h5 class="card-title custom-blue">Ruby</h5>
-                    <p class="card-text">Разработан в 1993–1995 годах японским программистом Юкихиро Мацумото.</p>
-                    <img src="./images/rdr2.png" alt="Ruby" class="mx-auto">
+                    <h5 class="card-title custom-blue order-md-2">Ruby</h5>
+                    <p class="card-text order-md-3">Разработан в 1993–1995 годах японским программистом Юкихиро
+                        Мацумото.</p>
+                    <img src="./images/rdr2.png" alt="Ruby" class="img-fluid w-50 mx-auto order-md-1">
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100 text-center p-3">
-                    <h5 class="card-title custom-blue">Python</h5>
-                    <p class="card-text">Создан в 1989–1991 годах голландским программистом Гвидо ван Россумом.</p>
-                    <img src="./images/rdr2.png" alt="Python" class="mx-auto">
+                    <h5 class="card-title custom-blue order-md-2">Python</h5>
+                    <p class="card-text order-md-3">Создан в 1989–1991 годах голландским программистом Гвидо ван
+                        Россумом.</p>
+                    <img src="./images/rdr2.png" alt="Python" class="img-fluid w-50 mx-auto order-md-1">
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100 text-center p-3">
-                    <h5 class="card-title custom-blue">C</h5>
-                    <p class="card-text">Разработан в 1969–1973 годах сотрудником Bell Labs Деннисом Ритчи.</p>
-                    <img src="./images/rdr2.png" alt="C" class="mx-auto">
+                    <h5 class="card-title custom-blue order-md-2">C</h5>
+                    <p class="card-text order-md-3">Разработан в 1969–1973 годах сотрудником Bell Labs Деннисом Ритчи.
+                    </p>
+                    <img src="./images/rdr2.png" alt="C" class="img-fluid w-50 mx-auto order-md-1">
                 </div>
             </div>
         </div>
